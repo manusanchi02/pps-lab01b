@@ -3,6 +3,7 @@ package e1;
 public class SilverBankAccount implements BankAccount {
 
     private final BankAccount base;
+    public static final int FEE_WITHDRAW = 1;
 
     public SilverBankAccount(BankAccount base) {
         this.base = base;
