@@ -1,11 +1,12 @@
 package e1;
 
-public class SilverBankAccount extends DecoratorBankAccount {
+public class FeeBankAccount extends DecoratorBankAccount {
 
-    public static final int FEE_WITHDRAW = 1;
+    public int feeWithdraw;
 
-    public SilverBankAccount(BankAccount base) {
+    public FeeBankAccount(BankAccount base, int fee) {
         super(base);
+        this.feeWithdraw = fee;
     }
 
     @Override

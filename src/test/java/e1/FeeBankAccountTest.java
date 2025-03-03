@@ -6,14 +6,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class SilverBankAccountTest extends CoreBankAccountTest{
+public class FeeBankAccountTest extends CoreBankAccountTest{
 
     public static final int FEE_WITHDRAW = 1;
 
     @Override
     @BeforeEach
     void init(){
-        this.account = new SilverBankAccount(new CoreBankAccount());
+        this.account = new FeeBankAccount(new CoreBankAccount(), FEE_WITHDRAW);
     }
 
     @Override
