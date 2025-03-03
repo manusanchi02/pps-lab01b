@@ -14,7 +14,7 @@ public class SilverBankAccountTest extends CoreBankAccountTest{
     @BeforeEach
     void init(){
         FactoryBankAccount factory = new FactoryBankAccountImpl();
-        this.account = factory.createAccount(FEE_WITHDRAW);
+        this.account = factory.createSilverAccount(FEE_WITHDRAW);
     }
 
     @Override

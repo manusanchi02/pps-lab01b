@@ -1,5 +1,7 @@
 package e1;
 
 public interface FactoryBankAccount {
-    public BankAccount createAccount(int fee);
+    public BankAccount createSilverAccount(int fee);
+
+    public BankAccount createGoldAccount(int overdraft);
 }
