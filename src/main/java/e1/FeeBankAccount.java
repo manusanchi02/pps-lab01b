@@ -11,9 +11,6 @@ public class FeeBankAccount extends DecoratorBankAccount {
 
     @Override
     public void withdraw(int amount) {
-        if (this.getBalance() < amount){
-            throw new IllegalStateException();
-        }
-        base.withdraw(amount + 1);
+        base.withdraw(amount + feeWithdraw);
     }
 }

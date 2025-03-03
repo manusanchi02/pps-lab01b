@@ -13,7 +13,7 @@ public class FeeBankAccountTest extends CoreBankAccountTest{
     @Override
     @BeforeEach
     void init(){
-        this.account = new FeeBankAccount(new CoreBankAccount(), FEE_WITHDRAW);
+        this.account = new FeeBankAccount(new CanWithdrawBankAccount(new CoreBankAccount()), FEE_WITHDRAW);
     }
 
     @Override
