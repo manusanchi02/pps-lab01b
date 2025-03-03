@@ -21,7 +21,7 @@ public class SilverBankAccountTest extends CoreBankAccountTest{
     public void testCanWithdraw() {
         this.account.deposit(BASE_DEPOSIT);
         this.account.withdraw(TEST_WITHDRAW);
-        assertEquals(TEST_WITHDRAW - FEE_WITHDRAW, this.account.getBalance());
+    assertEquals(BASE_DEPOSIT - TEST_WITHDRAW - FEE_WITHDRAW, this.account.getBalance());
     }
 
     @Test

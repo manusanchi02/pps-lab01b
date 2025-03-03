@@ -1,22 +1,11 @@
 package e1;
 
-public class SilverBankAccount implements BankAccount {
+public class SilverBankAccount extends DecoratorBankAccount {
 
-    private final BankAccount base;
     public static final int FEE_WITHDRAW = 1;
 
     public SilverBankAccount(BankAccount base) {
-        this.base = base;
-    }
-
-    @Override
-    public int getBalance() {
-        return base.getBalance();
-    }
-
-    @Override
-    public void deposit(int amount) {
-        base.deposit(amount);
+        super(base);
     }
 
     @Override
